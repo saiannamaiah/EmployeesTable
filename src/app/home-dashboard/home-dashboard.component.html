@@ -1,0 +1,47 @@
+<div class="table-container">
+    <table aria-describedby="API-response-table" aria-hidden="true">
+        <tr class="contentBg">
+            <td class="request_header_top_1">
+                Name
+            </td>
+            <td class="request_header_top">
+                Email
+            </td>
+            <td class="request_header_top">
+                Phone
+            </td>
+            <td class="request_header_top">
+                Department
+            </td>
+            <td class="request_header_top">
+                Salary
+            </td>
+            <td class="request_header_top">
+                Actions
+            </td>
+        </tr>
+        <tr *ngFor="let item of employeesData" class="contentBg">
+            <td class="request_header_bottom_1">
+                {{item.name }}
+            </td>
+            <td class="request_header_bottom">
+                {{item.email | emailMaskPipe}}
+            </td>
+            <td class="request_header_bottom">
+                {{item.phone | numberMaskPipe : 3}}
+            </td>
+            <td class="request_header_bottom_desc">
+                {{item.department}}
+            </td>
+            <td class="request_header_bottom_desc">
+                {{item.salary | format: 'salary'}}
+            </td>
+            <td class="request_header_bottom_desc">
+                <button [routerLink]="['/employee','edit',item.id]">Edit</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="back-button-container">
+    <button class="back-button" (click)="navigateToHome()">Back</button>
+</div>

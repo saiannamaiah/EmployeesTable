@@ -1,0 +1,75 @@
+<div class="form-container">
+    <form class="form" [formGroup]="editEmployee">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" formControlName="name" class="form-control" id="name"
+                    placeholder="Please Enter your Name">
+                <div *ngIf="editEmployee.controls['name'].touched && editEmployee.controls['name'].errors">
+                    <span *ngIf="editEmployee.controls['name'].errors['required']" class="error-message">Name is
+                        required.</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" formControlName="email" class="form-control" id="email"
+                    placeholder="Please Enter your Email">
+                <div *ngIf="editEmployee.controls['email'].touched && editEmployee.controls['email'].errors">
+                    <span *ngIf="editEmployee.controls['email'].errors['required']" class="error-message">Email is
+                        required.</span>
+                    <span *ngIf="editEmployee.controls['email'].errors['email']" class="error-message">Please enter a
+                        valid
+                        email.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" formControlName="phone" class="form-control" id="phone"
+                    placeholder="Please Enter your Phone Number">
+                <div *ngIf="editEmployee.controls['phone'].touched && editEmployee.controls['phone'].errors">
+                    <span *ngIf="editEmployee.controls['phone'].errors['required']" class="error-message">Phone Number
+                        is
+                        required.</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department</label>
+                <input type="text" formControlName="department" class="form-control" id="department"
+                    placeholder="Please Enter your Department">
+                <div *ngIf="editEmployee.controls['department'].touched && editEmployee.controls['department'].errors">
+                    <span *ngIf="editEmployee.controls['department'].errors['required']"
+                        class="error-message">Department
+                        is
+                        required.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="salary">Salary</label>
+                <input type="text" formControlName="salary" class="form-control" id="salary"
+                    placeholder="Please Enter your Salary">
+                <div *ngIf="editEmployee.controls['salary'].touched && editEmployee.controls['salary'].errors">
+                    <span *ngIf="editEmployee.controls['salary'].errors['required']" class="error-message">Salary is
+                        required.</span>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+
+
+<div class="back-button-container">
+    <button class="back-button" (click)="navigateToHome()">Back</button>
+</div>
+<div class="back-button-container">
+    <button class="back-button" (click)="saveEmployeeDataOnEdit()">Save</button>
+</div>

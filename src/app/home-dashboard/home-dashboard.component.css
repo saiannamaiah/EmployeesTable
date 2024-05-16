@@ -1,0 +1,118 @@
+/* Set top margin for space below the navbar */
+.table-container {
+    margin-top: 20px; /* Adjust this value as needed */
+    overflow: auto;
+    max-height: calc(100vh - 150px); /* Adjust to fit within viewport */
+    padding: 0 40px; /* Add more left and right padding for spacing */
+    box-sizing: border-box; /* Include padding in the total width */
+    display: flex;
+    justify-content: center; /* Center the table horizontally */
+    align-items: flex-start; /* Align items at the start (top) */
+}
+
+/* Style the table */
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Sticky header style */
+.table-container tr:first-child {
+    position: sticky;
+    top: 0;
+    background-color: #dcedf3;
+}
+
+/* Style table cells */
+.table-container td {
+    padding: 12px; /* Increase cell padding */
+}
+
+/* Hide scrollbar outside of the container */
+.table-container::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Optional: Show scrollbar for Firefox */
+.table-container {
+    scrollbar-width: none;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .table-container {
+        max-height: calc(100vh - 200px);
+    }
+}
+
+
+.request_header_top{
+  width: 150px;
+  font-weight: 600;
+  border: 1px solid #dddddd;
+
+}
+.request_header_top_1{
+  width: 200px;
+  font-weight: 600;
+  border: 1px solid #dddddd;
+
+}
+.request_header_bottom{
+  width: 150px;
+  border: 1px solid #dddddd;
+
+}
+.request_header_bottom_1{
+  width: 200px;
+  border: 1px solid #dddddd;
+
+}
+.request_header_bottom_second{
+  width: 150px;
+
+}
+.request_header_bottom_second_2{
+  width: 200px;
+
+}
+.request_header_bottom_desc{
+  width: 200px;
+  border: 1px solid #dddddd;
+
+}
+.request_header_top_desc{
+  width: 150px;
+  font-weight: 600;
+  border: 1px solid #dddddd;
+
+}
+.table td, .table th{
+  border: none;
+}
+.table thead th{
+  border: none;
+}
+
+/* Styling for back button container */
+.back-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust margin-top for spacing */
+}
+
+/* Styling for back button */
+.back-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff; /* Blueish color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

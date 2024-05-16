@@ -1,0 +1,9 @@
+/* styles.css */
+
+.navbar {
+    background-color: #17a2b8;
+}
+
+.navbar-brand {
+    color: white; /* Adjust text color for visibility */
+}
